@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<style>
+    input[type="file"]
+    {
+        background-color: aquamarine;
+        text-align: center;
+        margin-right: 600px;
+        padding: 30px;
+    }
+    textarea
+    {
+        margin: 30px;
+    }
+    button{
+        text-align: center;
+        background-color: cornflowerblue;
+        padding: 20px;
+        margin-left: 600px;
+        position: inline;
+    }
+</style>
+<body>
+    <input type="file" id="f"> <br>
+    <div class="s">
+<textarea  id="i" cols="30" rows="10"></textarea>
+    </div>
+    
+</body>
+<script>
+    let u=document.getElementById('f');
+    let o=document.getElementById("S");
+    u.addEventListener('change' ,() =>{
+        let d=new FileReader();
+        d.readAsText(u.files[0]);
+        d.onload=function(){
+            i.innerHTML=d.result;
+        }
+    })
+</script>
+</html>
